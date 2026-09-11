@@ -1,0 +1,502 @@
+Prompt for Claude:
+
+Act as a senior Product Manager, Fashion Retail Strategist, Data Scientist, and Expert UI/UX Designer.
+
+Build a single-page web application using HTML5, CSS3, vanilla JavaScript (ES6) and Chart.js (or D3.js if needed). Do not use any backend. The application should run entirely in the browser.
+
+Objective
+
+Design an executive decision-support dashboard for a fashion retail chain that helps management determine which new apparel product categories should receive future investment based on:
+
+Current apparel sales performance
+Category profitability
+Market trends
+Competitor expansion
+Consumer preferences of Gen Z and Gen Alpha
+Seasonal demand
+Fashion trends
+Investment simulations
+Risk analysis
+
+The application should resemble an enterprise planning tool used by retail companies such as Zara, H&M, Uniqlo, Gap, Reliance Trends, Lifestyle, Pantaloons, and Marks & Spencer.
+
+Design Requirements
+
+Create a modern executive dashboard featuring:
+
+Clean minimalist design
+Glassmorphism cards
+Responsive layout
+Light/Dark mode
+Smooth animations
+Interactive charts
+Material Design inspired controls
+Professional typography
+Color-coded KPIs
+Mobile responsive
+
+Layout should include:
+
+Left Sidebar
+
+Dashboard
+Sales
+Competitor Intelligence
+Consumer Trends
+Product Categories
+Investment Simulator
+Risk Analysis
+Recommendations
+
+Top Navigation
+
+Filters
+Financial Year
+Region
+Store Cluster
+Brand
+Customer Segment
+Export Report
+Dataset
+
+Generate realistic dummy data for:
+
+Existing Categories
+
+Men's Casual
+
+Men's Formal
+
+Women's Ethnic
+
+Women's Western
+
+Women's Fusion
+
+Kids Wear
+
+Innerwear
+
+Denim
+
+Footwear
+
+Accessories
+
+Activewear
+
+Sleepwear
+
+Plus Size
+
+Maternity
+
+Beauty
+
+Home Textiles
+
+Each category should include:
+
+Sales
+
+Gross Margin
+
+Growth %
+
+Inventory Turns
+
+Average Selling Price
+
+Units Sold
+
+Customer Rating
+
+Market Share
+
+Online Share
+
+Repeat Purchase Rate
+
+Markdown %
+
+Return Rate
+
+Competitor Intelligence
+
+Simulate data from competitors:
+
+Zara
+
+H&M
+
+Uniqlo
+
+Reliance Trends
+
+Pantaloons
+
+Max Fashion
+
+Lifestyle
+
+Shoppers Stop
+
+Include:
+
+New categories launched
+
+Growth %
+
+Price Position
+
+Sustainability initiatives
+
+Online strategy
+
+Premiumization
+
+Fashion cycles
+
+Market share gains
+
+Consumer Trend Engine
+
+Simulate consumer preference scores for:
+
+Gen Z
+
+Millennials
+
+Gen Alpha
+
+Working Professionals
+
+Families
+
+Premium Shoppers
+
+Value Shoppers
+
+Include trend scores for:
+
+Oversized Fashion
+
+Athleisure
+
+Quiet Luxury
+
+Sustainable Fashion
+
+Gender Neutral Clothing
+
+Smart Clothing
+
+Eco-friendly Fabrics
+
+Linen
+
+Organic Cotton
+
+Streetwear
+
+Korean Fashion
+
+Functional Clothing
+
+Travel Wear
+
+Performance Wear
+
+Occasion Wear
+
+Luxury Essentials
+
+Tech-enabled Apparel
+
+AI Designed Fashion
+
+Adaptive Clothing
+
+Investment Opportunity Engine
+
+Build an interactive simulator.
+
+User inputs:
+
+Investment Budget
+
+₹5 Cr
+
+₹10 Cr
+
+₹25 Cr
+
+₹50 Cr
+
+₹100 Cr
+
+Investment Horizon
+
+1 year
+
+3 years
+
+5 years
+
+10 years
+
+Risk Appetite
+
+Conservative
+
+Balanced
+
+Aggressive
+
+Store Expansion
+
+Ecommerce Expansion
+
+Private Label %
+
+Sustainability Investment
+
+AI Investment
+
+Omnichannel Investment
+
+Digital Marketing Spend
+
+Based on inputs simulate:
+
+Revenue Growth
+
+EBITDA
+
+Gross Margin
+
+ROI
+
+Payback Period
+
+NPV
+
+Market Share
+
+Customer Acquisition
+
+Inventory Requirement
+
+Cash Flow
+
+Working Capital
+
+Risk Simulator
+
+Create Monte Carlo style simulations.
+
+Risks:
+
+Fashion Trend Changes
+
+Competition
+
+Recession
+
+Inflation
+
+Cotton Price Increase
+
+Supply Chain Delay
+
+Currency Fluctuation
+
+Ecommerce Disruption
+
+Climate Risk
+
+AI Adoption Risk
+
+Sustainability Regulations
+
+Generate:
+
+Best Case
+
+Average Case
+
+Worst Case
+
+Probability Distribution
+
+Confidence Interval
+
+Risk Score
+
+AI Recommendation Engine
+
+Based on all simulated data recommend:
+
+Top 10 categories to invest in.
+
+Include:
+
+Investment Score
+
+Growth Potential
+
+Profitability
+
+Market Opportunity
+
+Competitive Intensity
+
+Consumer Acceptance
+
+Risk Score
+
+Strategic Fit
+
+Priority Ranking
+
+Explain WHY each category should be invested in.
+
+Interactive Visualizations
+
+Include:
+
+Executive KPI Cards
+
+Revenue Trend
+
+Heat Map
+
+Radar Chart
+
+Bubble Chart
+
+Treemap
+
+Sankey Diagram
+
+Category Comparison
+
+Competitor Comparison
+
+Market Share Pie
+
+Consumer Preference Radar
+
+Scenario Comparison
+
+ROI Waterfall
+
+Risk Heatmap
+
+Investment Matrix (BCG style)
+
+Quadrant Analysis
+
+What-if simulation graphs
+
+Forecast charts (5-year projection)
+
+What-if Scenario Builder
+
+Allow users to modify:
+
+Growth Rate
+
+Inflation
+
+Market Share
+
+Pricing
+
+Discounts
+
+Marketing Spend
+
+New Store Count
+
+Online Penetration
+
+Fabric Cost
+
+Customer Demand
+
+Immediately update:
+
+Charts
+
+KPIs
+
+Recommendations
+
+Investment priorities
+
+Risk profile
+
+Predictive Analytics
+
+Simulate simple forecasting using JavaScript:
+
+CAGR
+
+Moving Average
+
+Linear Regression
+
+Trend Forecast
+
+Seasonal Index
+
+Demand Forecast
+
+Display projected demand through 2035.
+
+Export Features
+
+Enable export to:
+
+PDF
+
+Excel
+
+CSV
+
+PNG charts
+
+Print-friendly report
+
+Technical Requirements
+
+Use:
+
+HTML5
+CSS3
+Vanilla JavaScript (ES6 Modules)
+Chart.js
+Local JSON objects for data
+No backend
+No frameworks
+No build tools
+Well-commented code
+Modular JavaScript
+Responsive layout
+Smooth animations
+Professional UI
+Accessible color palette
+Deliverables
+
+Produce:
+
+A complete index.html file with embedded CSS and JavaScript (or separate files if preferred).
+Fully functional interactive dashboard.
+Realistic simulated retail data.
+Interactive investment simulator.
+AI-style recommendation engine using weighted scoring (e.g., Sales 25%, Growth 25%, Margin 20%, Consumer Trend 15%, Competition 10%, Risk 5%).
+Dynamic charts that update instantly as user inputs change.
+A polished enterprise-grade UI suitable for presentation to a retail board of directors.
+
+Ensure the application is visually compelling, performant, and self-contained, demonstrating advanced product management, retail merchandising, strategic planning, and financial scenario analysis capabilities.

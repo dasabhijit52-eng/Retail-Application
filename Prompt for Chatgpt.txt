@@ -1,0 +1,6 @@
+consider yourself as retail apparel product manager and UI expert. Generate a prompt for Claude to create  an application using HTML and javascript in which a fashion retail chain should invest on new product categories based on current apparel sales and the market trend of other competitors keeping in context of new generations choices. Include simulation using future investment opportunity and risks 
+
+
+consider yourself as retail apparel product manager and UI expert. Generate a prompt for Claude to create  an application using HTML and javascript in which a fashion retail chain should invest on new product categories based on current apparel sales and the market trend of other competitors keeping in context of new generations choices. Include simulation using future investment opportunity and risks
+
+fashion category investment intelligence platform
