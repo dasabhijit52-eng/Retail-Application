@@ -1,0 +1,481 @@
+You are a Neo4j Graph Database Expert, Retail Domain Architect, and Fashion Industry Data Scientist.
+
+Generate a single executable Neo4j Cypher script (Neo4j 5.x compatible) that creates a realistic Fashion Retail Competitor Intelligence Knowledge Graph for the Indian fashion retail market.
+
+The graph should contain realistic synthetic business data and support AI-powered investment opportunity analysis, GraphRAG, LLM reasoning, and retail decision intelligence.
+
+Output only valid Cypher code.
+Do not generate CSV files, JSON, Markdown, explanations, or comments outside the Cypher script.
+
+General Requirements
+Use MERGE wherever possible to avoid duplicates.
+Use CREATE CONSTRAINT for unique identifiers.
+Create indexes on frequently queried properties.
+Generate approximately:
+8 Retailers
+16 Categories
+20 Fashion Trends
+7 Consumer Segments
+25 New Category Launches
+40 Sustainability Initiatives
+30 Digital Strategy nodes
+20 Pricing Strategy nodes
+20 Market Opportunity nodes
+Use realistic Indian market values.
+Use INR for all monetary values.
+Maintain referential integrity.
+Ensure the script can be executed directly in Neo4j Browser.
+Step 1 – Create Constraints
+
+Create uniqueness constraints for:
+
+Retailer
+Category
+ConsumerSegment
+FashionTrend
+NewCategory
+SustainabilityInitiative
+DigitalStrategy
+PricingStrategy
+MarketOpportunity
+Step 2 – Create Retailer Nodes
+
+Create Retailer nodes for:
+
+Zara India
+H&M India
+Uniqlo India
+Reliance Trends
+Pantaloons
+Max Fashion
+Lifestyle
+Shoppers Stop
+
+Each retailer should contain:
+
+retailerId
+name
+positioning
+marketShare
+annualRevenue
+storeCount
+onlineRevenueShare
+grossMargin
+averageSellingPrice
+promotionFrequency
+fashionCycleWeeks
+customerLoyaltyScore
+innovationScore
+Step 3 – Create Category Nodes
+
+Generate Category nodes for:
+
+Men's Casual
+Men's Formal
+Women's Ethnic
+Women's Western
+Women's Fusion
+Kids Wear
+Innerwear
+Denim
+Footwear
+Accessories
+Activewear
+Sleepwear
+Plus Size
+Maternity
+Beauty
+Home Textiles
+
+Each Category node should contain:
+
+categoryId
+name
+annualSales
+grossMargin
+growthPercent
+inventoryTurns
+averageSellingPrice
+unitsSold
+customerRating
+marketShare
+onlineShare
+repeatPurchaseRate
+markdownPercent
+returnRate
+trendScore
+profitabilityScore
+demandIndex
+opportunityScore
+
+Generate realistic values.
+
+Step 4 – Competitor Intelligence
+
+For every retailer create relationships to all categories.
+
+Relationship:
+
+(:Retailer)-[:COMPETES_IN]->(:Category)
+
+Relationship properties:
+
+categoryRevenue
+growthPercent
+categoryMarketShare
+assortmentDepth
+skuCount
+pricePosition
+promotionFrequency
+inventoryHealth
+sellThroughRate
+
+Price Position must be one of:
+
+Budget
+Value
+Mid
+Premium
+Luxury
+Step 5 – New Category Launches
+
+Create NewCategory nodes.
+
+Generate launches such as:
+
+Sustainable Fashion
+Organic Cotton Collection
+Eco Denim
+Adaptive Clothing
+AI Designed Fashion
+Smart Clothing
+Travel Wear
+Luxury Essentials
+Resort Wear
+Functional Clothing
+Korean Fashion
+Performance Wear
+Eco Friendly Basics
+Smart Casual
+Outdoor Collection
+Active Lifestyle
+Tech Enabled Apparel
+
+Each node contains:
+
+launchId
+name
+launchDate
+targetSegment
+launchSuccess
+innovationScore
+expectedRevenue
+growthPercent
+
+Relationship
+
+(:Retailer)-[:LAUNCHED]->(:NewCategory)
+
+Properties
+
+investment
+priority
+Step 6 – Sustainability
+
+Create SustainabilityInitiative nodes.
+
+Examples
+
+Organic Cotton
+Water Recycling
+Circular Fashion
+Carbon Neutral Manufacturing
+Eco Packaging
+Renewable Energy
+Recycled Polyester
+Zero Waste Production
+
+Properties
+
+initiativeId
+name
+esgScore
+carbonReduction
+implementationYear
+
+Relationship
+
+(:Retailer)-[:IMPLEMENTED]->(:SustainabilityInitiative)
+Step 7 – Online Strategy
+
+Create DigitalStrategy nodes.
+
+Generate
+
+AI Recommendations
+Mobile App
+Click & Collect
+Virtual Try-On
+Social Commerce
+Omnichannel Fulfillment
+Same Day Delivery
+Live Shopping
+
+Properties
+
+strategyId
+name
+digitalMaturity
+conversionLift
+customerAdoption
+
+Relationship
+
+(:Retailer)-[:USES]->(:DigitalStrategy)
+Step 8 – Premiumization
+
+Create PricingStrategy nodes.
+
+Examples
+
+Budget
+
+Value
+
+Mid Premium
+
+Premium
+
+Luxury
+
+Designer Collaboration
+
+Capsule Collection
+
+Properties
+
+strategyId
+name
+premiumIndex
+margin
+
+Relationship
+
+(:Retailer)-[:ADOPTS]->(:PricingStrategy)
+Step 9 – Fashion Trends
+
+Create FashionTrend nodes.
+
+Generate:
+
+Oversized Fashion
+Athleisure
+Quiet Luxury
+Sustainable Fashion
+Gender Neutral Clothing
+Smart Clothing
+Eco-friendly Fabrics
+Linen
+Organic Cotton
+Streetwear
+Korean Fashion
+Functional Clothing
+Travel Wear
+Performance Wear
+Occasion Wear
+Luxury Essentials
+Tech-enabled Apparel
+AI Designed Fashion
+Adaptive Clothing
+
+Each node contains
+
+trendId
+name
+popularityScore
+growthPercent
+searchIndex
+socialBuzz
+forecast
+investmentPotential
+Step 10 – Consumer Segments
+
+Create ConsumerSegment nodes.
+
+Generate
+
+Gen Z
+Millennials
+Gen Alpha
+Working Professionals
+Families
+Premium Shoppers
+Value Shoppers
+
+Properties
+
+segmentId
+fashionSpend
+onlinePreference
+priceSensitivity
+brandLoyalty
+trendAdoption
+premiumAffinity
+sustainabilityInterest
+Step 11 – Consumer Trend Engine
+
+Create relationships
+
+(:ConsumerSegment)-[:PREFERS]->(:FashionTrend)
+
+Relationship properties
+
+preferenceScore
+purchaseIntent
+futureGrowth
+
+Generate realistic values.
+
+Example
+
+Gen Z
+
+High
+
+Korean Fashion
+Oversized Fashion
+Streetwear
+Athleisure
+
+Low
+
+Men's Formal
+
+Millennials
+
+High
+
+Smart Casual
+Linen
+Travel Wear
+
+Premium Buyers
+
+High
+
+Quiet Luxury
+Luxury Essentials
+Step 12 – Category Trend Mapping
+
+Relationship
+
+(:Category)-[:DRIVEN_BY]->(:FashionTrend)
+
+Relationship properties
+
+impactScore
+futureGrowth
+Step 13 – Investment Opportunities
+
+Automatically create MarketOpportunity nodes based on graph patterns.
+
+Generate examples such as
+
+Sustainable Fashion Expansion
+Premium Athleisure
+Eco Denim
+Functional Clothing
+Korean Fashion Collection
+Travel Wear Expansion
+Adaptive Clothing
+Women's Office Wear
+Smart Casual
+
+Each opportunity should contain
+
+opportunityId
+name
+investmentAmount
+expectedRevenue
+roi
+confidence
+risk
+priority
+businessCase
+Step 14 – Opportunity Relationships
+
+Generate
+
+(Category)-[:HAS_INVESTMENT_OPPORTUNITY]->(MarketOpportunity)
+
+(FashionTrend)-[:DRIVES]->(MarketOpportunity)
+
+(ConsumerSegment)-[:TARGETS]->(MarketOpportunity)
+
+(Retailer)-[:HAS_COMPETITIVE_PRESSURE]->(MarketOpportunity)
+Step 15 – Business Rules
+
+Generate realistic market behavior using these assumptions.
+
+Zara
+Premium pricing
+Fastest trend adoption
+New collection every 4 weeks
+Minimal markdowns
+Strong metro demand
+H&M
+Youth focused
+High promotional activity
+Frequent collaborations
+Large online presence
+Uniqlo
+Functional clothing
+Linen leadership
+Premium basics
+Stable pricing
+Reliance Trends
+Value retailer
+Tier-2 city leadership
+Festival promotions
+Pantaloons
+Family apparel
+Balanced ethnic and western
+Max Fashion
+Affordable pricing
+High promotion frequency
+Lifestyle
+Premium department store
+Beauty and office wear
+Shoppers Stop
+Premium brands
+Designer collections
+Loyalty-driven business
+Step 16 – Data Quality
+
+Ensure:
+
+Categories with higher demand have higher sales.
+Higher ratings result in lower return rates.
+Premium retailers have higher ASP and lower markdowns.
+Sustainable initiatives align with Sustainable Fashion and Organic Cotton trends.
+Consumer preferences align with fashion trends.
+Market opportunities are generated from realistic combinations of demand, trend growth, and competitor gaps.
+All node IDs are unique.
+Relationships are meaningful and connected.
+The graph is dense enough for Graph Data Science algorithms and GraphRAG.
+Final Output Requirements
+
+Return only executable Cypher code that:
+
+Creates schema constraints and indexes.
+Creates all nodes with realistic synthetic data.
+Creates all relationships.
+Populates the graph with business-consistent values.
+Supports Cypher queries for:
+Competitor benchmarking
+White-space analysis
+Investment opportunity identification
+Consumer trend analysis
+Fashion trend forecasting
+Category performance analysis
+GraphRAG and LLM-powered retail insights

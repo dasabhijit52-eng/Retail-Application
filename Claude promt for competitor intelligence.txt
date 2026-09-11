@@ -1,0 +1,488 @@
+You are a Retail Intelligence Data Architect, Knowledge Graph Expert, and Fashion Market Analyst.
+
+Generate a fully connected, Neo4j-compatible synthetic dataset representing the Indian fashion retail ecosystem. The purpose is to enable graph analytics and LLM-powered reasoning to identify new investment opportunities, including:
+
+New product category launches
+White-space opportunities
+Geographic expansion
+Pricing optimization
+Emerging fashion trends
+Competitor gap analysis
+Supplier diversification
+Customer segment targeting
+
+The generated dataset must be suitable for direct import into Neo4j using LOAD CSV.
+
+Retail Competitors
+
+Generate data for only these retailers:
+
+Zara India
+H&M India
+Uniqlo India
+Reliance Trends
+Pantaloons
+Max Fashion
+Lifestyle
+Shoppers Stop
+Neo4j Graph Model
+
+Create the following node labels.
+
+Retailer
+
+Properties
+
+retailerId
+name
+type
+positioning
+origin
+website
+marketShare
+annualRevenue
+stores
+onlinePresence
+loyaltyProgram
+Brand
+
+Properties
+
+brandId
+name
+retailer
+targetSegment
+Product
+
+Properties
+
+productId
+sku
+name
+category
+subCategory
+launchDate
+mrp
+sellingPrice
+grossMargin
+trendScore
+demandScore
+sustainabilityScore
+lifecycle
+rating
+reviewCount
+returnRate
+
+Generate 1,500 products.
+
+Category
+
+Examples
+
+Shirts
+Dresses
+Kurta Sets
+Athleisure
+Sneakers
+Travel Wear
+Sustainable Fashion
+Activewear
+Accessories
+Denim
+CustomerSegment
+
+Generate
+
+Gen Z
+Millennials
+Young Professionals
+Working Women
+Family Shoppers
+Budget Buyers
+Premium Buyers
+Kids
+Trend
+
+Examples
+
+Quiet Luxury
+Oversized Fashion
+Linen Collection
+Utility Wear
+Y2K
+Athleisure
+Smart Casual
+Sustainable Fashion
+Indo-Western
+Performance Wear
+
+Properties
+
+trendId
+
+trendScore
+
+growthRate
+
+forecast
+
+socialBuzz
+
+Campaign
+
+Generate
+
+Diwali Sale
+Independence Day
+Wedding Collection
+Summer Collection
+End of Season Sale
+Winter Collection
+New Arrival
+Member Exclusive
+City
+
+Generate
+
+Mumbai
+
+Delhi NCR
+
+Pune
+
+Bengaluru
+
+Hyderabad
+
+Chennai
+
+Kolkata
+
+Ahmedabad
+
+Lucknow
+
+Jaipur
+
+Indore
+
+Nagpur
+
+Coimbatore
+
+Kochi
+
+Region
+
+North
+
+South
+
+East
+
+West
+
+Festival
+
+Generate
+
+Diwali
+
+Eid
+
+Navratri
+
+Durga Puja
+
+Wedding Season
+
+Christmas
+
+Republic Day
+
+Independence Day
+
+Material
+
+Generate
+
+Cotton
+
+Organic Cotton
+
+Linen
+
+Denim
+
+Polyester
+
+Rayon
+
+Silk
+
+Recycled Fabric
+
+Bamboo Fiber
+
+Influencer
+
+Generate
+
+100 influencers
+
+Properties
+
+followers
+
+engagement
+
+platform
+
+category
+
+Supplier
+
+Generate
+
+50 suppliers
+
+Properties
+
+supplierId
+
+country
+
+leadTime
+
+qualityScore
+
+costIndex
+
+SocialPlatform
+
+Instagram
+
+YouTube
+
+Pinterest
+
+Facebook
+
+X
+
+MarketOpportunity
+
+Properties
+
+opportunityId
+
+score
+
+estimatedRevenue
+
+investment
+
+risk
+
+expectedROI
+
+priority
+
+Relationships
+
+Generate CSV files for every relationship.
+
+Retailer sells Product
+(:Retailer)-[:SELLS]->(:Product)
+
+Properties
+
+launchDate
+
+Product belongs to Category
+(:Product)-[:BELONGS_TO]->(:Category)
+Product targets CustomerSegment
+(:Product)-[:TARGETS]->(:CustomerSegment)
+Product available in City
+(:Product)-[:AVAILABLE_IN]->(:City)
+
+Properties
+
+weeklySales
+
+inventory
+
+City belongs Region
+(:City)-[:PART_OF]->(:Region)
+Product uses Material
+(:Product)-[:USES]->(:Material)
+Product follows Trend
+(:Product)-[:FOLLOWS]->(:Trend)
+
+Properties
+
+strength
+
+Campaign promotes Product
+(:Campaign)-[:PROMOTES]->(:Product)
+
+Properties
+
+discount
+
+salesLift
+
+Campaign during Festival
+(:Campaign)-[:RUNS_DURING]->(:Festival)
+Influencer promotes Product
+(:Influencer)-[:PROMOTES]->(:Product)
+
+Properties
+
+engagementRate
+
+Product competes with Product
+(:Product)-[:COMPETES_WITH]->(:Product)
+
+Properties
+
+competitionScore
+
+Retailer launches Campaign
+(:Retailer)-[:LAUNCHES]->(:Campaign)
+Product supplied by Supplier
+(:Supplier)-[:SUPPLIES]->(:Product)
+
+Properties
+
+leadTime
+
+cost
+
+Trend popular on Platform
+(:Trend)-[:POPULAR_ON]->(:SocialPlatform)
+
+Properties
+
+engagement
+
+Trend growing in Region
+(:Trend)-[:GROWING_IN]->(:Region)
+
+Properties
+
+growthRate
+
+Festival drives Category
+(:Festival)-[:DRIVES]->(:Category)
+
+Properties
+
+demandIncrease
+
+Category has Opportunity
+(:Category)-[:HAS_OPPORTUNITY]->(:MarketOpportunity)
+Region has Opportunity
+(:Region)-[:HAS_OPPORTUNITY]->(:MarketOpportunity)
+CustomerSegment interested in Trend
+(:CustomerSegment)-[:INTERESTED_IN]->(:Trend)
+Business Intelligence Rules
+
+Generate realistic relationships based on these assumptions:
+
+Zara launches new collections every 4–6 weeks with minimal discounts.
+H&M has high promotion frequency targeting Gen Z.
+Uniqlo emphasizes functional basics with premium fabrics.
+Reliance Trends and Max Fashion dominate value-priced segments in Tier-2 cities.
+Lifestyle and Shoppers Stop focus on premium brands and loyalty-driven campaigns.
+Sustainable Fashion, Athleisure, and Smart Casual are high-growth categories.
+Diwali, Wedding Season, and Independence Day significantly increase demand for ethnic wear and occasion wear.
+Social media engagement strongly influences trend adoption and product sales.
+Products with higher ratings should have lower return rates and higher sell-through.
+Tier-2 cities respond more strongly to promotions than metro cities.
+Investment Opportunity Generation
+
+Automatically generate MarketOpportunity nodes based on graph patterns.
+
+Examples:
+
+High trend score + low competitor presence → White-space opportunity.
+High demand + limited assortment → New product launch.
+High sales + low inventory → Inventory expansion.
+High search volume + few SKUs → Category investment.
+Strong regional demand + no local assortment → Geographic expansion.
+Growing trend + premium customer segment → Premium line extension.
+High engagement + low competition → Early market entry.
+Supplier concentration risk → Diversify sourcing.
+
+Each opportunity should include:
+
+Opportunity ID
+Category
+Region
+Customer Segment
+Investment Type
+Investment Amount (INR)
+Expected Revenue
+Expected ROI
+Confidence Score
+Risk Level
+Strategic Priority
+Business Rationale
+Output Files
+
+Create one CSV per node label and one CSV per relationship, for example:
+
+Node CSVs
+
+Retailers.csv
+Brands.csv
+Products.csv
+Categories.csv
+CustomerSegments.csv
+Trends.csv
+Campaigns.csv
+Cities.csv
+Regions.csv
+Festivals.csv
+Materials.csv
+Influencers.csv
+Suppliers.csv
+SocialPlatforms.csv
+MarketOpportunities.csv
+
+Relationship CSVs
+
+Retailer_SELLS_Product.csv
+Product_BELONGS_TO_Category.csv
+Product_TARGETS_CustomerSegment.csv
+Product_AVAILABLE_IN_City.csv
+City_PART_OF_Region.csv
+Product_USES_Material.csv
+Product_FOLLOWS_Trend.csv
+Campaign_PROMOTES_Product.csv
+Campaign_RUNS_DURING_Festival.csv
+Influencer_PROMOTES_Product.csv
+Product_COMPETES_WITH_Product.csv
+Retailer_LAUNCHES_Campaign.csv
+Supplier_SUPPLIES_Product.csv
+Trend_POPULAR_ON_SocialPlatform.csv
+Trend_GROWING_IN_Region.csv
+Festival_DRIVES_Category.csv
+Category_HAS_OPPORTUNITY_MarketOpportunity.csv
+Region_HAS_OPPORTUNITY_MarketOpportunity.csv
+CustomerSegment_INTERESTED_IN_Trend.csv
+Expected Outcome
+
+The resulting knowledge graph should enable queries such as:
+
+Which product categories have high demand but low competitor penetration?
+Which fashion trends should receive new investment?
+Which cities are underserved for specific categories?
+Which customer segments represent the highest-growth opportunity?
+Which competitors are strongest or weakest in each category?
+Where should pricing be adjusted to maximize margin?
+Which suppliers pose concentration or lead-time risks?
+What investment opportunities offer the highest expected ROI?
+
+This dataset should support Neo4j Graph Data Science, Cypher queries, LLM-based reasoning (GraphRAG), and executive decision-making for fashion retail investment planning.
